@@ -1,6 +1,18 @@
 import mysql.connector
 
-# Replace with your connection details
+db_root = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Papertrail1." 
+)
+
+cursor_root = db_root.cursor()
+
+
+cursor_root.execute("CREATE DATABASE IF NOT EXISTS alx_book_store;")
+print("Database check/creation complete.")
+
+
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
